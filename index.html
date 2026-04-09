@@ -63,23 +63,26 @@
                     meaning "apple/fruit," and <i>d’oro</i>, meaning "of gold").</li>
                 <li>Site will be broken up into three pages, main pomodoro 25 min timer, the short 5 min break timer, and then long 15 min <br />
                     timer. User's will also have an option to add tasks to a list directly on the site.</li>
-                <li>Sound to use for when timer goes off: </li>
-                <audio controls src="/assets/audio/classic_alarm.mp3"></audio>
-                <li>Possible page design inspiration:</li>
-                <div>
-                    <img
-                    src="/assets/images/site1.png"
-                    width="500"
-                    alt="Site 1" />
-                    <img
-                    src="/assets/images/site2.png"
-                    width="500"
-                    alt="Site 2" />
-                    <img
-                    src="/assets/images/site3.png"
-                    width="500"
-                    alt="Site 3" />
-                </div>
+                <li>Sound to use for when timer goes off: <br />
+                    <audio controls src="/assets/audio/classic_alarm.mp3"></audio>
+                </li>
+                
+                <li>Possible page design inspiration: <br />
+                    <div>
+                        <img
+                        src="/assets/images/site1.png"
+                        width="500"
+                        alt="Site 1" />
+                        <img
+                        src="/assets/images/site2.png"
+                        width="500"
+                        alt="Site 2" />
+                        <img
+                        src="/assets/images/site3.png"
+                        width="500"
+                        alt="Site 3" />
+                    </div> 
+                </li>
             </ul>
         </section>
 
@@ -108,16 +111,17 @@
         
         <section>
             <h2 id="form">End of Meeting Form</h2>
-            <form action="" method="get">
+            <form method="get">
                 <div>
                     <label for="name">Enter your name: </label>
-                    <input type="text" name="name" required />
+                    <input type="text" id="name" name="name" required />
                 </div>
 
                 <div>
                     <label for="meeting-date">Meeting date:</label>
                     <input
                     type="date"
+                    id="meeting-date"
                     name="meeting-date"
                     value="2026-04-08"
                     min="2026-01-01"
@@ -128,7 +132,7 @@
                     <label for="meeting-type-choice">What kind of meeting was this?:</label>
                     <input list="meeting-types" name="meeting-type" />
 
-                    <datalist id="meeting-types">
+                    <datalist id="meeting-type-choice">
                         <option value="Brainstorm"></option>
                         <option value="Code Review"></option>
                         <option value="Check-in"></option>
@@ -138,7 +142,7 @@
 
                 <label for="time-select">How long was the meeting?:</label>
 
-                <select name="times">
+                <select id="time-select" name="times">
                     <option value="">--Please choose an option--</option>
                     <option value="short">30min-1hr</option>
                     <option value="medium">1-3hrs</option>
@@ -150,17 +154,17 @@
                         <legend>What went well?:</legend>
 
                         <div>
-                            <input type="checkbox" name="communcation" />
+                            <input type="checkbox" id="communcation" name="communcation" />
                             <label for="communication">Communication</label>
                         </div>
 
                         <div>
-                            <input type="checkbox"  name="planning" />
+                            <input type="checkbox" id="planning" name="planning" />
                             <label for="planning">Planning</label>
                         </div>
 
                         <div>
-                            <input type="checkbox"  name="productivity" />
+                            <input type="checkbox" id="productivity" name="productivity" />
                             <label for="productivity">Productivity</label>
                         </div>
                     </fieldset>
@@ -172,21 +176,21 @@
                      <fieldset>
                         <legend>How satisfied were you with this meeting</legend>
 
-                        <input type="radio" value="very-satisfied" />
+                        <input type="radio" id="very-satisfied" value="very-satisfied" />
                         <label for="very-satisfied">Very Satisfied</label><br />
 
-                        <input type="radio" value="satisfied" />
+                        <input type="radio" id="satisfied" value="satisfied" />
                         <label for="satisfied">Satisfied</label><br />
 
-                        <input type="radio" value="unsatisfied" />
+                        <input type="radio" id="unsatisfied" value="unsatisfied" />
                         <label for="unsatisfied">Unsatisfied</label><br />
 
-                        <input type="radio" value="very-unsatisfied" />
+                        <input type="radio" id="very-unsatisfied" value="very-unsatisfied" />
                         <label for="very-unsatisfied">Very Unsatisfied</label><br />
                     </fieldset>
 
                     <label for="explanation">Explain the choice you selected:</label> <br />
-                    <textarea name="explanation" rows="5" cols="33">Type here...</textarea>
+                    <textarea id="explanation" name="explanation" rows="5" cols="33">Type here...</textarea>
                 </div>
 
                 <div>
