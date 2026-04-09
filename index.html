@@ -7,5 +7,197 @@
     <title>Group Log</title>
   </head>
   <body>
+    <header>
+        <h1 id="header">Pomodoro Timer First Brainstorm</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#updates">Updates/Questions</a></li>
+                <li><a href="#notes">Meeting Notes</a></li>
+                <li><a href="#todos">To-dos</a></li>
+                <li><a href="#form">End of Meeting Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2><em>Wednesday 04/08 (2 hours)</em></h2>
+            <p><b>Attendance:</b> John, Paul, George, Ringo</p>
+        </section>
+
+        <section>
+            <h3 id="agenda">Agenda:</h3>
+            <ol>
+                <li>Joke of the day</li>
+                <li>Report any updates / ask any questions</li>
+                <li>Review Project Specifications</li>
+                <li>Assign Tasks</li>
+            </ol>
+        </section>
+
+        <section>
+            <h3>Joke of the day!</h3>
+            <details>
+                <summary>What do you call towels in the bathroom?</summary>
+                    John Linen!
+            </details>
+        </section>
+
+        <section>
+            <h3 id="updates">Updates/Questions:</h3>
+            <ul>
+                <li>[Ringo]: <a href="#pomodoro">What the heck is a Pomodoro Timer?</a></li>
+                <li>[John]: I created and shared the github repo</li>
+                <li>[George]: What should we do for our next group social :P?</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="notes">Meeting Notes:</h3>
+            <ul>
+                <li><a href="#vid">Music video</a> from last group social!</li>
+                <li><span id="pomodoro">A Pomodoro timer is a time-management tool that breaks work into focused 25-minute intervals <br />
+                    (called "pomodoros"), separated by 5-minute breaks</span></li>
+                <li>"Pomodoro" is the Italian word for tomato. Literally translated, it means "golden apple" (composed of <i>pomo</i>, <br />
+                    meaning "apple/fruit," and <i>d’oro</i>, meaning "of gold").</li>
+                <li>Site will be broken up into three pages, main pomodoro 25 min timer, the short 5 min break timer, and then long 15 min <br />
+                    timer. User's will also have an option to add tasks to a list directly on the site.</li>
+                <li>Sound to use for when timer goes off: </li>
+                <audio controls src="/assets/audio/classic_alarm.mp3"></audio>
+                <li>Possible page design inspiration:</li>
+                <div>
+                    <img
+                    src="/assets/images/site1.png"
+                    width="500"
+                    alt="Site 1" />
+                    <img
+                    src="/assets/images/site2.png"
+                    width="500"
+                    alt="Site 2" />
+                    <img
+                    src="/assets/images/site3.png"
+                    width="500"
+                    alt="Site 3" />
+                </div>
+            </ul>
+        </section>
+
+        <section>
+            <h3 id="todos">Todos:</h3>
+            <ul>
+                <li>[John]: Implement 25 min timer page <strong>due 4/30</strong></li>
+                <li>[Paul]: Implement 5 min break timer page <strong>due 4/30</strong></li>
+                <li>[George]: Implement 15 min break timer page <strong>due 4/30</strong></li>
+                <li>[Ringo]: Implement task list <strong>due 4/30</strong></li>
+                <li>[ALL]: Fill out end of meeting form</li>
+            </ul>
+        </section>
+        <hr>
+
+        <section>
+            <div id="vid">
+                <video controls width="640">
+                    <source src="assets/videos/beatles.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section>
+            <h2 id="form">End of Meeting Form</h2>
+            <form action="" method="get">
+                <div>
+                    <label for="name">Enter your name: </label>
+                    <input type="text" name="name" required />
+                </div>
+
+                <div>
+                    <label for="meeting-date">Meeting date:</label>
+                    <input
+                    type="date"
+                    name="meeting-date"
+                    value="2026-04-08"
+                    min="2026-01-01"
+                    max="2026-12-31" />
+                </div>
+
+                <div> 
+                    <label for="meeting-type-choice">What kind of meeting was this?:</label>
+                    <input list="meeting-types" name="meeting-type" />
+
+                    <datalist id="meeting-types">
+                        <option value="Brainstorm"></option>
+                        <option value="Code Review"></option>
+                        <option value="Check-in"></option>
+                        <option value="Group Social"></option>
+                    </datalist>
+                </div>
+
+                <label for="time-select">How long was the meeting?:</label>
+
+                <select name="times">
+                    <option value="">--Please choose an option--</option>
+                    <option value="short">30min-1hr</option>
+                    <option value="medium">1-3hrs</option>
+                    <option value="long">3+hrs</option>
+                </select>
+                
+                <div> 
+                    <fieldset>
+                        <legend>What went well?:</legend>
+
+                        <div>
+                            <input type="checkbox" name="communcation" />
+                            <label for="communication">Communication</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox"  name="planning" />
+                            <label for="planning">Planning</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox"  name="productivity" />
+                            <label for="productivity">Productivity</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="button">Clear Checkboxes</button>
+                </div>
+
+                <div> 
+                     <fieldset>
+                        <legend>How satisfied were you with this meeting</legend>
+
+                        <input type="radio" value="very-satisfied" />
+                        <label for="very-satisfied">Very Satisfied</label><br />
+
+                        <input type="radio" value="satisfied" />
+                        <label for="satisfied">Satisfied</label><br />
+
+                        <input type="radio" value="unsatisfied" />
+                        <label for="unsatisfied">Unsatisfied</label><br />
+
+                        <input type="radio" value="very-unsatisfied" />
+                        <label for="very-unsatisfied">Very Unsatisfied</label><br />
+                    </fieldset>
+
+                    <label for="explanation">Explain the choice you selected:</label> <br />
+                    <textarea name="explanation" rows="5" cols="33">Type here...</textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="Submit!" />
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Beatles</p>
+    </footer>
   </body>
 </html>
