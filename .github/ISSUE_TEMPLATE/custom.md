@@ -11,6 +11,4 @@ Task description:
 
 Names of Contributors: 
 
-Summary of Changes: 
-
-Code Changed:
+Specific Tasks:
