@@ -6,9 +6,11 @@
     <link rel="icon" href="/favicon.ico">
     <title>Group Log</title>
   </head>
+
   <body>
     <header>
         <h1 id="header">Pomodoro Timer First Brainstorm</h1>
+
         <nav class="menu">
             <ul>
                 <li><a href="#agenda">Agenda</a></li>
@@ -21,7 +23,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="meeting-info">
             <h2><em>Wednesday 04/08 (2 hours)</em></h2>
             <p><b>Attendance:</b> John, Paul, George, Ringo</p>
         </section>
@@ -40,7 +42,7 @@
             <h3>Joke of the day!</h3>
             <details>
                 <summary>What do you call towels in the bathroom?</summary>
-                    John Linen!
+                John Linen!
             </details>
         </section>
 
@@ -57,31 +59,36 @@
             <h3 id="notes">Meeting Notes:</h3>
             <ul>
                 <li><a href="#vid">Music video</a> from last group social!</li>
-                <li><span id="pomodoro">A Pomodoro timer is a time-management tool that breaks work into focused 25-minute intervals <br />
-                    (called "pomodoros"), separated by 5-minute breaks</span></li>
-                <li>"Pomodoro" is the Italian word for tomato. Literally translated, it means "golden apple" (composed of <i>pomo</i>, <br />
-                    meaning "apple/fruit," and <i>d’oro</i>, meaning "of gold").</li>
-                <li>Site will be broken up into three pages, main pomodoro 25 min timer, the short 5 min break timer, and then long 15 min <br />
-                    timer. User's will also have an option to add tasks to a list directly on the site.</li>
-                <li>Sound to use for when timer goes off: <br />
+
+                <li>
+                    <span id="pomodoro">
+                        A Pomodoro timer is a time-management tool that breaks work into focused 25-minute intervals <br />
+                        (called "pomodoros"), separated by 5-minute breaks
+                    </span>
+                </li>
+
+                <li>
+                    "Pomodoro" is the Italian word for tomato. Literally translated, it means "golden apple"
+                    (composed of <i>pomo</i> and <i>d’oro</i>).
+                </li>
+
+                <li>
+                    Site will be broken into three pages: 25 min timer, 5 min break, 15 min break.
+                    Users can also add tasks.
+                </li>
+
+                <li>
+                    Sound to use:
                     <audio controls src="assets/audio/classic_alarm.mp3"></audio>
                 </li>
-                
-                <li>Possible page design inspiration: <br />
-                    <div>
-                        <img
-                        src="assets/images/site1.png"
-                        width="500"
-                        alt="Site 1" />
-                        <img
-                        src="assets/images/site2.png"
-                        width="500"
-                        alt="Site 2" />
-                        <img
-                        src="assets/images/site3.png"
-                        width="500"
-                        alt="Site 3" />
-                    </div> 
+
+                <li>
+                    Possible page design inspiration:
+                    <div class="image-container">
+                        <img src="assets/images/site1.png" width="500" alt="Site 1">
+                        <img src="assets/images/site2.png" width="500" alt="Site 2">
+                        <img src="assets/images/site3.png" width="500" alt="Site 3">
+                    </div>
                 </li>
             </ul>
         </section>
@@ -96,106 +103,94 @@
                 <li>[ALL]: Fill out end of meeting form</li>
             </ul>
         </section>
+
         <hr>
 
         <section>
             <div id="vid">
                 <video controls width="640">
-                    <source src="assets/videos/beatles.mp4" type="video/mp4" />
+                    <source src="assets/videos/beatles.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
         </section>
 
         <hr>
-        
+
         <section>
             <h2 id="form">End of Meeting Form</h2>
+
             <form method="get">
                 <div>
-                    <label for="name">Enter your name: </label>
-                    <input type="text" id="name" name="name" required />
+                    <label for="name">Enter your name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
 
                 <div>
                     <label for="meeting-date">Meeting date:</label>
-                    <input
-                    type="date"
-                    id="meeting-date"
-                    name="meeting-date"
-                    value="2026-04-08"
-                    min="2026-01-01"
-                    max="2026-12-31" />
-                </div>
-
-                <div> 
-                    <label for="meeting-type">What kind of meeting was this?:</label>
-                    <input list="meeting-types" id="meeting-type" name="meeting-type" />
-
-                    <datalist id="meeting-types">
-                        <option value="Brainstorm"></option>
-                        <option value="Code Review"></option>
-                        <option value="Check-in"></option>
-                        <option value="Group Social"></option>
-                    </datalist>
-                </div>
-
-                <label for="time-select">How long was the meeting?:</label>
-
-                <select id="time-select" name="times">
-                    <option value="">--Please choose an option--</option>
-                    <option value="short">30min-1hr</option>
-                    <option value="medium">1-3hrs</option>
-                    <option value="long">3+hrs</option>
-                </select>
-                
-                <div> 
-                    <fieldset>
-                        <legend>What went well?:</legend>
-
-                        <div>
-                            <input type="checkbox" id="communication" name="communication" />
-                            <label for="communication">Communication</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="planning" name="planning" />
-                            <label for="planning">Planning</label>
-                        </div>
-
-                        <div>
-                            <input type="checkbox" id="productivity" name="productivity" />
-                            <label for="productivity">Productivity</label>
-                        </div>
-                    </fieldset>
-
-                    <button type="button">Clear Checkboxes</button>
-                </div>
-
-                <div> 
-                     <fieldset>
-                        <legend>How satisfied were you with this meeting</legend>
-
-                        <input type="radio" id="very-satisfied" name="satisfaction" value="very-satisfied" />
-                        <label for="very-satisfied">Very Satisfied</label><br />
-
-                        <input type="radio" id="satisfied" name="satisfaction" value="satisfied" />
-                        <label for="satisfied">Satisfied</label><br />
-
-                        <input type="radio" id="unsatisfied" name="satisfaction" value="unsatisfied" />
-                        <label for="unsatisfied">Unsatisfied</label><br />
-
-                        <input type="radio" id="very-unsatisfied" name="satisfaction" value="very-unsatisfied" />
-                        <label for="very-unsatisfied">Very Unsatisfied</label><br />
-                    </fieldset>
-
-                    <label for="explanation">Explain the choice you selected:</label> <br />
-                    <textarea id="explanation" name="explanation" rows="5" cols="33">Type here...</textarea>
+                    <input type="date" id="meeting-date" name="meeting-date">
                 </div>
 
                 <div>
-                    <input type="submit" value="Submit!" />
+                    <label for="meeting-type">What kind of meeting was this?:</label>
+                    <input list="meeting-types" id="meeting-type" name="meeting-type">
+
+                    <datalist id="meeting-types">
+                        <option value="Brainstorm">
+                        <option value="Code Review">
+                        <option value="Check-in">
+                        <option value="Group Social">
+                    </datalist>
                 </div>
+
+                <div>
+                    <label for="time-select">How long was the meeting?:</label>
+
+                    <select id="time-select" name="times">
+                        <option value="">--Please choose an option--</option>
+                        <option value="short">30min-1hr</option>
+                        <option value="medium">1-3hrs</option>
+                        <option value="long">3+hrs</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>What went well?:</legend>
+
+                    <input type="checkbox" id="communication">
+                    <label for="communication">Communication</label>
+
+                    <input type="checkbox" id="planning">
+                    <label for="planning">Planning</label>
+
+                    <input type="checkbox" id="productivity">
+                    <label for="productivity">Productivity</label>
+                </fieldset>
+
+                <button type="button">Clear Checkboxes</button>
+
+                <fieldset>
+                    <legend>Satisfaction</legend>
+
+                    <input type="radio" name="satisfaction" id="very-satisfied">
+                    <label for="very-satisfied">Very Satisfied</label>
+
+                    <input type="radio" name="satisfaction" id="satisfied">
+                    <label for="satisfied">Satisfied</label>
+
+                    <input type="radio" name="satisfaction" id="unsatisfied">
+                    <label for="unsatisfied">Unsatisfied</label>
+
+                    <input type="radio" name="satisfaction" id="very-unsatisfied">
+                    <label for="very-unsatisfied">Very Unsatisfied</label>
+                </fieldset>
+
+                <div>
+                    <label for="explanation">Explain your choice:</label> <br />
+                    <textarea id="explanation" rows="5" cols="33">Type here...</textarea>
+                </div>
+
+                <input type="submit" value="Submit!">
             </form>
         </section>
     </main>
